@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "nome": "Matemática",
+    "período": "Noite",
+    "descrição": "Curso de Matemática para o Ensino Médio"
+  },
+  {
+    "id": "2",
+    "nome": "Física",
+    "período": "Tarde",
+    "descrição": "Curso de física para o ensino médio."
+  },
+  {
+    "id": "3",
+    "nome": "Química",
+    "período": "Noite",
+    "descrição": "Curso para Licenciatura em Química"
+  },
+  {
+    "id": "4",
+    "nome": "Biologia",
+    "período": "Manhã",
+    "descrição": "Curso de Medicina para o Ensino Superior"
+  },
+  {
+    "id": "5",
+    "nome": "Língua Portuguesa e Literatura",
+    "período": "Manhã",
+    "descrição": "Curso de Português para o Ensino Fundamental 2"
+  }
+]
