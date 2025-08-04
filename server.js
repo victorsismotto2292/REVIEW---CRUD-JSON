@@ -460,6 +460,32 @@ app.post('/cursos/atualizar-curso', (req, res) => {
         `);
         return;
     }
+    else if(cursos.find(curso => curso.id.toLowerCase() === id.toLowerCase())){
+                res.send(`
+            
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Erro - Atualizar Curso</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            </head>
+            <body class="bg-light">
+                <div class="alert alert-danger text-center shadow" role="alert">
+                <h4 class="alert-heading">Erro!</h4>
+                <p class="fw-semibold">O ID desse curso já existe no banco de dados, por favor, tente novamente.</p>
+                <a href="http://localhost:3000/cursos" class="btn btn-outline-danger">Voltar</a>
+                </div>  
+            </body>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+            </script>
+            </html>  
+            
+        `);
+            return;        
+    }
     else{
         cursos[cursosIndex].id = id;
         cursos[cursosIndex].nome = nome;
@@ -475,7 +501,7 @@ app.post('/cursos/atualizar-curso', (req, res) => {
                 <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Erro - Adicionar Curso</title>
+                <title>Atualizar Curso</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
                 </head>
                 <body class="bg-light">
@@ -584,7 +610,7 @@ app.get('/cursos/excluir-curso-confirmado', (req, res) => {
                 <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Erro - Adicionar Curso</title>
+                <title>Excluir Curso</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
                 </head>
                 <body class="bg-light">
